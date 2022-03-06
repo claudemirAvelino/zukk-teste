@@ -3,9 +3,6 @@ import {AppComponent} from './app.component';
 // configs
 import {BrowserModule} from '@angular/platform-browser';
 import {NgModule, LOCALE_ID} from '@angular/core';
-import localePt from '@angular/common/locales/pt';
-import {registerLocaleData} from '@angular/common/';
-registerLocaleData(localePt);
 import {HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import {AppRoutingModule} from './routes/app-routing.module';
 
@@ -49,20 +46,10 @@ import {MatTreeModule} from '@angular/material/tree';
 import {LayoutModule} from '@angular/cdk/layout';
 
 // components
-import {ComandaCreateComponent} from './modules/comanda/comanda-create/comanda-create.component';
-import {HomeComponent} from './views/home/home.component';
-import {ProductsCrudComponent} from './views/products-crud/products-crud.component';
-import {ServiceCrudComponent} from './views/service-crud/service-crud.component';
-import {ComandaCrudComponent} from './views/comanda-crud/comanda-crud.component';
 import {UserCreateComponent} from './modules/user/user-create/user-create.component';
-import {TabelaServicoComponent} from './modules/servico/tabela-servico/tabela-servico.component';
 import {SidenavComponent} from './components/sidenav/sidenav.component';
 import {DashboardComponent} from './components/menu-dashboard/dashboard.component';
 import {LoginComponent} from './components/login/login.component';
-import {ModalServicoComponent} from './modules/servico/modal/modalServico.component';
-import {ModalProdutoComponent} from './modules/estoque/modal/modalProduto.component';
-import {TabelaEstoqueComponent} from './modules/estoque/tabela-estoque/tabela-estoque.component';
-import {UserCrudComponent} from './views/user-crud/user-crud.component';
 
 // interceptors
 import { TokenInterceptorService } from './interceptors/token-interceptor.service';
@@ -70,20 +57,10 @@ import { TokenInterceptorService } from './interceptors/token-interceptor.servic
 @NgModule({
   declarations: [
     AppComponent,
-    UserCrudComponent,
-    HomeComponent,
-    ProductsCrudComponent,
-    ServiceCrudComponent,
-    ComandaCrudComponent,
     UserCreateComponent,
-    ComandaCreateComponent,
-    TabelaServicoComponent,
     SidenavComponent,
     DashboardComponent,
     LoginComponent,
-    ModalServicoComponent,
-    ModalProdutoComponent,
-    TabelaEstoqueComponent,
   ],
   imports: [
     FormsModule,

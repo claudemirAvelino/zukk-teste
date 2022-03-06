@@ -23,7 +23,7 @@ export class UserCreateComponent implements OnInit {
 
 
   createUser(): void {
-    this.userService.showMessage('Cadastrado com sucesso')
+    this.userService.showMessage('Cadastrado com sucesso');
 
   }
 
