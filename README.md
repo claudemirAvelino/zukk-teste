@@ -1,3 +1,13 @@
+
+#FRONTEND
+## Run
+
+Run `yarn` to install de dependencies.
+
+Run `yarn start` to run project
+
+#BACKEND
+
 # Adonis API application
 
 This is the boilerplate for creating an API server in AdonisJs, it comes pre-configured with.
@@ -10,10 +20,10 @@ This is the boilerplate for creating an API server in AdonisJs, it comes pre-con
 
 ## Setup
 
-Use the command to install the dependencies
+Use the adonis command to install the blueprint
 
 ```bash
-npm install
+adonis new yardstick --api-only
 ```
 
 or manually clone the repo and then run `npm install`.
@@ -31,4 +41,3 @@ adonis migration:run
 ```js
 yarn start
 ```
-
