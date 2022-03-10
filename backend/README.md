@@ -18,11 +18,17 @@ adonis new yardstick --api-only
 
 or manually clone the repo and then run `npm install`.
 
+verificar as informações no .env para configurar o banco de dados
 
 ### Migrations
 
 Run the following command to run startup migrations.
-
+comando para gerar as tabelas no banco de dados
 ```js
 adonis migration:run
 ```
+
+```js
+yarn start
+```
+

@@ -1,0 +1,14 @@
+mat-dialog-content form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+}
+
+button {
+  margin-left: 5px;
+}
+
+agm-map {
+  height: 20vh;
+  padding-bottom: 20px;
+}

@@ -54,8 +54,8 @@ module.exports = {
       host: Env.get('DB_HOST', 'localhost'),
       port: Env.get('DB_PORT', ''),
       user: Env.get('DB_USER', 'root'),
-      password: Env.get('DB_PASSWORD', ''),
-      database: Env.get('DB_DATABASE', 'barbearia_adonis')
+      password: Env.get('DB_PASSWORD', 'root'),
+      database: Env.get('DB_DATABASE', 'adonis')
     },
     debug: Env.get('DB_DEBUG', false)
   },

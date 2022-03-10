@@ -44,6 +44,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {LayoutModule} from '@angular/cdk/layout';
+import { AgmCoreModule } from '@agm/core';
 
 // components
 import {UserCreateComponent} from './modules/user/user-create/user-create.component';
@@ -53,6 +54,7 @@ import {LoginComponent} from './components/login/login.component';
 
 // interceptors
 import { TokenInterceptorService } from './interceptors/token-interceptor.service';
+import { FormUserComponent } from './components/form-user/form-user.component';
 
 @NgModule({
   declarations: [
@@ -61,6 +63,7 @@ import { TokenInterceptorService } from './interceptors/token-interceptor.servic
     SidenavComponent,
     DashboardComponent,
     LoginComponent,
+    FormUserComponent,
   ],
   imports: [
     FormsModule,
@@ -105,6 +108,9 @@ import { TokenInterceptorService } from './interceptors/token-interceptor.servic
     MatTreeModule,
     HttpClientModule,
     LayoutModule,
+    AgmCoreModule.forRoot({
+      apiKey: 'AIzaSyDuTBLW48mTZ1MWWQEUoji8UxZKBJp9abw'
+    })
   ],
   providers: [
     {

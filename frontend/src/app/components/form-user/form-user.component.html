@@ -1,0 +1,44 @@
+<h1 mat-dialog-title>Adicionar cliente</h1>
+<mat-dialog-content>
+  <mat-form-field appearance="outline">
+    <mat-label>CEP</mat-label>
+    <input matInput [(ngModel)]="cep" (blur)="getCep()" placeholder="CEP" />
+  </mat-form-field>
+  <form [formGroup]="clienteForm">
+    <mat-form-field appearance="outline">
+      <mat-label>Nome</mat-label     >
+      <input matInput formControlName="nome" placeholder="Nome" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Endereço</mat-label>
+      <input matInput formControlName="endereco" placeholder="Endereço" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Bairro</mat-label>
+      <input matInput formControlName="bairro" placeholder="Bairro" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Cidade</mat-label>
+      <input matInput formControlName="cidade" placeholder="Cidade" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>UF</mat-label>
+      <input matInput formControlName="uf" placeholder="UF" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Telefone</mat-label>
+      <input matInput formControlName="telefone" mask="(00)00000-0000" placeholder="Telefone" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>E-Mail</mat-label>
+      <input matInput formControlName="email" placeholder="E-Mail" />
+    </mat-form-field>
+  </form>
+  <agm-map [latitude]="lat" [longitude]="lng">
+    <agm-marker [latitude]="lat" [longitude]="lng"></agm-marker>
+  </agm-map>
+</mat-dialog-content>
+<div mat-dialog-action [align]="'end'">
+  <button mat-raised-button color="warn" mat-dialog-close>Fechar</button>
+  <button mat-raised-button color="primary" (click)="addCustomer()">Salvar</button>
+</div>

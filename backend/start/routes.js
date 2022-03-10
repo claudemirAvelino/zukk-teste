@@ -19,12 +19,10 @@ const Route = use('Route')
 Route.get('/dashboard', '').middleware(["auth"])
 Route.post('/register','AuthController.register').middleware(["auth"])
 Route.post('/authenticate','AuthController.authenticate')
+Route.get('/get-address/:cep', 'CustomerController.getCustomerAddress')
 
-//Cria todas rotas para um api. Roda o comando adonis route:list
 Route.group(()=>{
-  Route.resource("produto","ProdutoController").apiOnly()
+  Route.resource("customer","CustomerController").apiOnly()
 }).middleware(["auth"])
 
-Route.post('/comanda/create','ComandaController.store').middleware(["auth"])
-Route.get('/comanda/index','ComandaController.index').middleware(["auth"])
 Route.get('/app',"AppController.index").middleware(["auth"])
